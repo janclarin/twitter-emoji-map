@@ -2,7 +2,7 @@
 .idea
 
 # Bower
-app/bower_components
+client/app/bower_components
 
 # Logs
 logs
