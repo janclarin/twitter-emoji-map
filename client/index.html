@@ -18,16 +18,23 @@
         <tr>
           <th>Country</th>
           <th>Most Popular Emoji</th>
-          <th>Count</th>
+          <!-- Poo emoji count -->
+          <th>&#x1F4A9 Count</th>
         </tr>
       </thead>
       <tbody>
       <tr ng-repeat="(countryCode, countryInfo) in vm.countries">
         <td class="lead">{{ countryInfo.name }}</td>
-        <td class="lead">{{ countryInfo.mostPopularEmoji }}</td>
         <td class="lead">
           <p ng-if="countryInfo.mostEmojiOccurrences && countryInfo.mostEmojiOccurrences > 0">
+            {{ countryInfo.mostPopularEmoji }}
             {{ countryInfo.mostEmojiOccurrences }}
+          </p>
+        </td>
+        <td class="lead">
+          <!-- Poo emoji count -->
+          <p ng-if="countryInfo.emojiOccurrences['💩']">
+            {{ countryInfo.emojiOccurrences['💩'] }}
           </p>
         </td>
       </tr>
