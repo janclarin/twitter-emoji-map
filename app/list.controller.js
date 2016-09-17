@@ -5,7 +5,7 @@
         .module('app')
         .controller('ListController', ListController);
 
-    ListController.$inject = [];
+    ListController.$inject = ['countryService'];
 
     function ListController() {
         var vm = this;
