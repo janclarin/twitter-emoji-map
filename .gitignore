@@ -1,3 +1,9 @@
+# IntelliJ settings
+.idea
+
+# Bower
+app/bower_components
+
 # Logs
 logs
 *.log
