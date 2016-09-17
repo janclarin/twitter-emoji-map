@@ -11,7 +11,7 @@
 </head>
 <body ng-app="app">
   <!-- Content -->
-  <div class="container" ng-controller="ListController as vm">
+  <div class="container" ng-controller="CountryController as vm">
     <!-- List of countries -->
     <table class="table table-bordered table-striped">
       <thead>
@@ -24,7 +24,7 @@
       <tr ng-repeat="country in vm.countries">
         <td>{{ country.name }}</td>
         <div ng-if="country.emoji != null">
-          <td>{{country.emoji}}</td>
+          <td>&#x1F601</td>
         </div>
       </tr>
       </tbody>
