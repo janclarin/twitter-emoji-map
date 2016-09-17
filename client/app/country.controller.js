@@ -16,6 +16,6 @@
                 .then(function(countries) {
                     vm.countries = countries;
                 });
-          }, 5000);
-        }
+        }, 1000);
+    }
 })();
