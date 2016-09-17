@@ -1,12 +1,8 @@
 'use strict';
 
 var express = require('express'),
-    router = express.Router();
-
-router.get('/', getCountries);
-
-function getCountries(req, res) {
-    var countries = [
+    router = express.Router(),
+    countries = [
         { name: 'Afghanistan', code: 'AF' },
         { name: 'Åland Islands', code: 'AX' },
         { name: 'Albania', code: 'AL' },
@@ -253,6 +249,10 @@ function getCountries(req, res) {
         { name: 'Zambia', code: 'ZM' },
         { name: 'Zimbabwe', code: 'ZW' }
     ];
+
+router.get('/', getCountries);
+
+function getCountries(req, res) {
     res.json(countries);
 }
 
