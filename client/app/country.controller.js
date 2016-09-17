@@ -3,11 +3,11 @@
 
     angular
         .module('app')
-        .controller('ListController', ListController);
+        .controller('CountryController', CountryController);
 
-    ListController.$inject = ['$interval', 'countryService'];
+    CountryController.$inject = ['$interval', 'countryService'];
 
-    function ListController($interval, countryService) {
+    function CountryController($interval, countryService) {
         
         var vm = this;
         vm.countries = [
@@ -260,6 +260,6 @@
         
         $interval(function() {
             vm.countries = countryService.get();
-          }, 1000);
+          }, 5000);
         }
 })();
