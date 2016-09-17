@@ -11,15 +11,15 @@
     countryService.$inject = ['$http'];
 
     function countryService($http) {
-        var apiUrl = '/api/';
+        var apiUrl = '/api';
 
         return {
-            get: get,
+            get: get
         };
 
         function get() {
             return $http.get(
-                apiUrl + '/countries/'
+                apiUrl + '/countries'
             ).then(function (response) {
                 return response.data;
             });
