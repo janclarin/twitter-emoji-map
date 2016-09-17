@@ -21,11 +21,9 @@
         </tr>
       </thead>
       <tbody>
-      <tr ng-repeat="country in vm.countries">
-        <td>{{ country.name }}</td>
-        <div ng-if="country.emoji != null">
-          <td>&#x1F601</td>
-        </div>
+      <tr ng-repeat="(countryCode, countryInfo) in vm.countries">
+        <td class="lead">{{ countryInfo.name }}</td>
+        <td class="lead">{{ countryInfo.mostPopularEmoji }}</td>
       </tr>
       </tbody>
     </table>
