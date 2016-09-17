@@ -259,7 +259,7 @@
         ];
         
         $interval(function() {
-            countryService.get();
+            vm.countries = countryService.get();
           }, 1000);
         }
 })();
