@@ -23,7 +23,9 @@
       <tbody>
       <tr ng-repeat="country in vm.countries">
         <td>{{ country.name }}</td>
-        <td>:)</td>
+        <div ng-if="country.emoji != null">
+          <td>{{country.emoji}}</td>
+        </div>
       </tr>
       </tbody>
     </table>

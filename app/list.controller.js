@@ -5,9 +5,10 @@
         .module('app')
         .controller('ListController', ListController);
 
-    ListController.$inject = ['countryService'];
+    ListController.$inject = ['$interval', 'countryService'];
 
-    function ListController() {
+    function ListController($interval, countryService) {
+        
         var vm = this;
         vm.countries = [
             { name: 'Afghanistan', code: 'AF' },
@@ -256,5 +257,9 @@
             { name: 'Zambia', code: 'ZM' },
             { name: 'Zimbabwe', code: 'ZW' }
         ];
-    }
+        
+        $interval(function() {
+            countryService.get();
+          }, 1000);
+        }
 })();
