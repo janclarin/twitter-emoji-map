@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Twitter Emoji Map</title>
+
+  <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+  <!-- Content -->
+  <div class="container" ng-controller="ListController as vm">
+    <!-- List of countries -->
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Most Popular Emoji</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="country in vm.countries">
+        <td>{{ country.name }}</td>
+        <td>:)</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Scripts -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+
+  <!-- Angular -->
+  <!-- Modules -->
+  <script src="app.module.js"></script>
+  <script src="list.controller.js"></script>
+</body>
+</html>
