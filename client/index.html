@@ -33,12 +33,10 @@
       <tr ng-repeat="(countryCode, countryInfo) in vm.countries">
         <td class="lead">{{ countryInfo.name }}</td>
         <td class="lead">
-          <select ng-model="queryBy">
             <p ng-if="countryInfo.mostEmojiOccurrences && countryInfo.mostEmojiOccurrences > 0">
               {{ countryInfo.mostPopularEmoji }}
               {{ countryInfo.mostEmojiOccurrences }}
             </p>
-          </select>
         </td>
         <td class="lead">
           <!-- Poo emoji count -->
