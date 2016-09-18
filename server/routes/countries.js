@@ -1,6 +1,7 @@
 'use strict';
 
 var express = require('express'),
+    flag = require('emoji-flag'),
     Twit = require('twit'),
     T = new Twit({
         consumer_key: 'OWNF0XVSAHcpV6wu34anznHmZ',
@@ -257,6 +258,10 @@ var express = require('express'),
         "ZM": { name: "Zambia" },
         "ZW": { name: "Zimbabwe" }
     };
+
+for (var countryCode in countries) {
+    countries[countryCode].name = flag(countryCode) + " " + countries[countryCode].name;
+}
 
 var emojis = '😀,😬,😁,😂,😃,😄,😅,😆,😇,😉,😊,🙂,🙃,☺️,😋,😌,😍,😘,😗,😙,😚,😜,😝,😛,🤑,🤓,😎,🤗,😏,😶,😐,😑,😒,🙄,🤔,😳,😞,😟,😠,😡,😔,😕,🙁,☹️,😣,😖,😫,😩,😤,😮,😱,😨,😰,😯,😦,😧,😢,😥,😪,😓,😭,😵,🤐,😷,🤒,🤕,😴,💩,😈,👿,😺,😸,😹,😻,😼,😽,🙀,😿,😾,🐵,🙈,🙉,🙊';
 var emojiArray = emojis.split(',');
