@@ -11,7 +11,7 @@
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "debug": "^2.2.0",
-    "emoji-flags": "^1.2.0",
+    "emoji-flag": "^1.1.0",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "serve-favicon": "^2.3.0",
