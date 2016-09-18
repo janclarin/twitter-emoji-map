@@ -1,5 +1,5 @@
 # twitter-emoji-map
-See what mood a country is in based on the emojis found in tweets from people.
+See what mood a country is in based on the emojis found in tweets from people in real-time.
 - Is Britain feeling like a tears-of-joy emoji or crying-face emoji after Brexit?
 - During e.g. Christmas, see which countries are tweeting Christmas-related emojis to understand cultural observances.
 
