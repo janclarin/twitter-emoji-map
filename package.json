@@ -7,6 +7,10 @@
     "start": "node server/server.js",
     "postinstall": "bower install"
   },
+  "engines": {
+    "node": "~5.5.0",
+    "npm": "~3.6.0"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
